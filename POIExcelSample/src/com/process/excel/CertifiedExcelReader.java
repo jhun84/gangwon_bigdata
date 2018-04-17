@@ -129,20 +129,8 @@ public class CertifiedExcelReader {
 										vo.setM_cert(value);
 										break;
 									case 12:
-										vo.setV_enter(value);
-										break;
-									case 13:
-										vo.setRc_company(value);
-										break;
-									case 14:
-										vo.setStart_team(value);
-										break;
-									case 15:
-										vo.setSs_company(value);
-										break;
-									case 16:
-										vo.setJojik_type(value);
-										break;
+										vo.setCompany_type(value);
+										break;									
 									case 17:
 										vo.setEs_date(value);
 										break;
@@ -348,20 +336,8 @@ public class CertifiedExcelReader {
 										vo.setM_cert(value);
 										break;
 									case 12:
-										vo.setV_enter(value);
-										break;
-									case 13:
-										vo.setRc_company(value);
-										break;
-									case 14:
-										vo.setStart_team(value);
-										break;
-									case 15:
-										vo.setSs_company(value);
-										break;
-									case 16:
-										vo.setJojik_type(value);
-										break;
+										vo.setCompany_type(value);
+										break;									
 									case 17:
 										vo.setEs_date(value);
 										break;

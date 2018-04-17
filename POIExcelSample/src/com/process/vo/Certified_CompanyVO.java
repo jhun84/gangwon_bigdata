@@ -13,11 +13,7 @@ public class Certified_CompanyVO {
 	private String ji_date; //지정일
 	private String jiend_date; //지정만료일
 	private String m_cert; //인증유지현황
-	private String v_enter; //마을기업
-	private String rc_company; //농어촌공동체회사
-	private String start_team; //창업팀
-	private String ss_company; //자활기업여부
-	private String jojik_type; //조직형태
+	private String company_type;
 	private String es_date; //설립일
 	private String bm_number; //사업장관리번호
 	private String company_bnum; //사업자번호 본점
@@ -113,36 +109,12 @@ public class Certified_CompanyVO {
 	public void setM_cert(String m_cert) {
 		this.m_cert = m_cert;
 	}
-	public String getV_enter() {
-		return v_enter;
+	public String getCompany_type() {
+		return company_type;
 	}
-	public void setV_enter(String v_enter) {
-		this.v_enter = v_enter;
-	}
-	public String getRc_company() {
-		return rc_company;
-	}
-	public void setRc_company(String rc_company) {
-		this.rc_company = rc_company;
-	}
-	public String getStart_team() {
-		return start_team;
-	}
-	public void setStart_team(String start_team) {
-		this.start_team = start_team;
-	}
-	public String getSs_company() {
-		return ss_company;
-	}
-	public void setSs_company(String ss_company) {
-		this.ss_company = ss_company;
-	}
-	public String getJojik_type() {
-		return jojik_type;
-	}
-	public void setJojik_type(String jojik_type) {
-		this.jojik_type = jojik_type;
-	}
+	public void setCompany_type(String company_type) {
+		this.company_type = company_type;
+	}	
 	public String getEs_date() {
 		return es_date;
 	}

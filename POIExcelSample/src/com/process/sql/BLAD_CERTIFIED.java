@@ -21,12 +21,9 @@ public class BLAD_CERTIFIED {
 				.append("COMPANY_ZIP, ")     
 				.append("CC_AREA, ")      
 				.append("CA_AREA, ")      
-				.append("J_AREA, ")    
-				.append("B_AREA, ")          
 				.append("CERT_NUM, ")      
 				.append("SPT, ")  
 				.append("JI_DATE, ")       
-				.append("JIEND_DATE, ")     
 				.append("M_CERT, ")       
 				.append("COMPANY_TYPE, ")       
 				.append("JOJIK_TYPE, ")   
@@ -59,7 +56,7 @@ public class BLAD_CERTIFIED {
 				.append("?, ?, ?, ?, ?, ")
 				.append("?, ?, ?, ?, ?, ")
 				.append("?, ?, ?, ?, ?, ")
-				.append("?, ?, ?, ?, ?, (select now()), ?)");
+				.append("?, ?, (select now()), ?)");
 		
 		try{
 			pstmt = conn.prepareStatement(sql.toString());			        
@@ -68,37 +65,34 @@ public class BLAD_CERTIFIED {
 			pstmt.setString(3,info.company_zip);
 			pstmt.setString(4,info.cc_area);
 			pstmt.setString(5,info.ca_area);
-			pstmt.setString(6,info.j_area);
-			pstmt.setString(7,info.b_area);
-			pstmt.setString(8,info.cert_num);
-			pstmt.setString(9,info.spt);
-			pstmt.setString(10,info.ji_date);
-			pstmt.setString(11,info.jiend_date);
-			pstmt.setString(12,info.m_cert);
-			pstmt.setString(13,info.company_type);
-			pstmt.setString(14,info.jojik_type);
-			pstmt.setString(15,info.es_date);
-			pstmt.setString(16,info.bm_number);
-			pstmt.setString(17,info.company_bnum);
-			pstmt.setString(18,info.company_jnum);
-			pstmt.setString(19,info.uniq_num);
-			pstmt.setString(20,info.cr_num);
-			pstmt.setString(21,info.sud_nm);
-			pstmt.setString(22,info.sud_num);
-			pstmt.setString(23,info.biz_detail);
-			pstmt.setString(24,info.item_gubun);
-			pstmt.setString(25,info.item_dru);
-			pstmt.setString(26,info.item_jru);
-			pstmt.setString(27,info.industry_bunryu);
-			pstmt.setString(28,info.ceo_nm);
-			pstmt.setString(29,info.ceo_birth);
-			pstmt.setString(30,info.pic);
-			pstmt.setString(31,info.c_pos);
-			pstmt.setString(32,info.hp_number);
-			pstmt.setString(33,info.areap_number);
-			pstmt.setString(34,info.fax_number);
-			pstmt.setString(35,info.email);
-			pstmt.setString(36,info.homepage);
+			pstmt.setString(6,info.cert_num);
+			pstmt.setString(7,info.spt);
+			pstmt.setString(8 ,info.ji_date);
+			pstmt.setString(9 ,info.m_cert);
+			pstmt.setString(10,info.company_type);
+			pstmt.setString(11,info.jojik_type);
+			pstmt.setString(12,info.es_date);
+			pstmt.setString(13,info.bm_number);
+			pstmt.setString(14,info.company_bnum);
+			pstmt.setString(15,info.company_jnum);
+			pstmt.setString(16,info.uniq_num);
+			pstmt.setString(17,info.cr_num);
+			pstmt.setString(18,info.sud_nm);
+			pstmt.setString(19,info.sud_num);
+			pstmt.setString(20,info.biz_detail);
+			pstmt.setString(21,info.item_gubun);
+			pstmt.setString(22,info.item_dru);
+			pstmt.setString(23,info.item_jru);
+			pstmt.setString(24,info.industry_bunryu);
+			pstmt.setString(25,info.ceo_nm);
+			pstmt.setString(26,info.ceo_birth);
+			pstmt.setString(27,info.pic);
+			pstmt.setString(28,info.c_pos);
+			pstmt.setString(29,info.hp_number);
+			pstmt.setString(30,info.areap_number);
+			pstmt.setString(31,info.fax_number);
+			pstmt.setString(32,info.email);
+			pstmt.setString(33,info.homepage);
 						
         	    result = pstmt.executeUpdate();
         	    System.out.println("CERTIFIED_COMPANY_INSERT Query : "+sql.toString());

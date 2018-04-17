@@ -5,7 +5,7 @@ public class COMMON_CONN {
 	
 	public static Connection getConnection() throws SQLException {	      
         String driver = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://localhost/gangwon_bigdata_test";
+        String url = "jdbc:mysql://localhost/gangwon_bigdata_test?characterEncoding=UTF-8";
         String user = "certified";
         String password = "certified";
               

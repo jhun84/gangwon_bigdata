@@ -10,10 +10,10 @@ public class Certified_CompanyVO {
 	private String b_area; //부처형
 	private String cert_num; //인증지정번호
 	private String social_purpose_type; //사회적목적실현유형
-	private String ji_date; //지정일
-	private String jiend_date; //지정만료일
+	private String ji_date; //지정일	
 	private String m_cert; //인증유지현황
 	private String company_type;
+	private String jojik_type; //조직형
 	private String es_date; //설립일
 	private String bm_number; //사업장관리번호
 	private String company_bnum; //사업자번호 본점
@@ -96,13 +96,7 @@ public class Certified_CompanyVO {
 	}
 	public void setJi_date(String ji_date) {
 		this.ji_date = ji_date;
-	}
-	public String getJiend_date() {
-		return jiend_date;
-	}
-	public void setJiend_date(String jiend_date) {
-		this.jiend_date = jiend_date;
-	}
+	}	
 	public String getM_cert() {
 		return m_cert;
 	}
@@ -114,7 +108,13 @@ public class Certified_CompanyVO {
 	}
 	public void setCompany_type(String company_type) {
 		this.company_type = company_type;
-	}	
+	}		
+	public String getJojik_type() {
+		return jojik_type;
+	}
+	public void setJojik_type(String jojik_type) {
+		this.jojik_type = jojik_type;
+	}
 	public String getEs_date() {
 		return es_date;
 	}

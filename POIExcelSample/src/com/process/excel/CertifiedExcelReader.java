@@ -16,7 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.process.vo.Certified_CompanyVO;
-import com.process.vo.CustomerVo;
+
 
 public class CertifiedExcelReader {
 	

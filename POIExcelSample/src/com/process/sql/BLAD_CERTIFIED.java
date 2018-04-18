@@ -7,6 +7,7 @@ import com.process.dm.DM_CERTIFIED_COMPANY;
 import com.process.util.LogWriter;
 
 public class BLAD_CERTIFIED {
+	
 	final static String logfile = "/Users/hunchori/Documents/logs/PAY.log";
 	
 	private int CERTIFIED_COMPANY_INSERT(DM_CERTIFIED_COMPANY info, Connection conn) throws SQLException{		

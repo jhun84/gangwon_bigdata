@@ -106,95 +106,89 @@ public class CertifiedExcelReader {
 										break;
 									case 4:
 										vo.setCa_area(value);
-										break;
+										break;									
 									case 5:
-										vo.setJ_area(value);
-										break;
-									case 6:
-										vo.setB_area(value);
-										break;
-									case 7:
 										vo.setCert_num(value);
 										break;
-									case 8:
+									case 6:
 										vo.setSocial_purpose_type(value);
 										break;
-									case 9:
+									case 7:
 										vo.setJi_date(value);
 										break;									
-									case 11:
+									case 8:
 										vo.setM_cert(value);
 										break;
-									case 12:
+									case 9:
 										vo.setCompany_type(value);
 										break;
-									case 13:
+									case 10:
 										vo.setJojik_type(value);
 										break;
-									case 14:
+									case 11:
 										vo.setEs_date(value);
 										break;
-									case 15:
+									case 12:
 										vo.setBm_number(value);
 										break;
-									case 16:
+									case 13:
 										vo.setCompany_bnum(value);
 										break;
-									case 17:
+									case 14:
 										vo.setCompany_jnum(value);
 										break;
-									case 18:
+									case 15:
 										vo.setUniq_num(value);
 										break;
-									case 19:
+									case 16:
 										vo.setCr_num(value);
 										break;
-									case 20:
+									case 17:
 										vo.setSud_nm(value);
 										break;
-									case 21:
+									case 18:
 										vo.setSud_num(value);
 										break;
-									case 22:
+									case 19:
 										vo.setBiz_detail(value);
 										break;
-									case 23:
+									case 20:
 										vo.setItem_gubun(value);
 										break;
-									case 24:
+									case 21:
 										vo.setItem_dru(value);
 										break;
-									case 25:
+									case 22:
 										vo.setItem_jru(value);
 										break;
-									case 26:
+									case 23:
 										vo.setIndustry_bunryu(value);
 										break;
-									case 27:
+									case 24:
 										vo.setCeo_nm(value);
 										break;
-									case 28:
+									case 25:
 										vo.setCeo_birth(value);
 										break;
-									case 29:
+									case 26:
 										vo.setPic(value);
 										break;
-									case 30:
+									case 27:
 										vo.setC_pos(value);
 										break;
-									case 31:
+									case 28:
 										vo.setHp_number(value);
 										break;
-									case 32:
+									case 29:
 										vo.setAreap_number(value);
 										break;
-									case 33:
+									case 30:
 										vo.setFax_number(value);
 										break;
-									case 34:
+									case 31:
 										vo.setEmail(value);
 										break;
-									case 35:
+									case 32:
 										vo.setHomepage(value);
 										break;
 									default:
@@ -230,7 +224,7 @@ public class CertifiedExcelReader {
 	}
 	
 	/**
-	 * XLSX 파일을 분석하여 List<CustomerVo> 객체로 반환
+	 * XLSX 파일을 분석하여 List<Certified_CompanyVo> 객체로 반환
 	 * @param filePath
 	 * @return
 	 */
@@ -292,6 +286,7 @@ public class CertifiedExcelReader {
 					                case HSSFCell.CELL_TYPE_ERROR:
 					                    value = curCell.getErrorCellValue()+"";
 					                    break;
+					                    
 					                default:
 					                	value = new String();
 										break;
@@ -299,109 +294,103 @@ public class CertifiedExcelReader {
 									
 									// 현재 column index에 따라서 vo에 입력
 									switch (cellIndex) {
-									case 0: // 아이디
+									case 0:
 										vo.setCompany_name(value);;
 										break;
 									case 1:
 										vo.setCompany_address(value);;
 										break;
 									case 2:
-										vo.setCompany_address(value);
+										vo.setCompany_zip(value);
 										break;
 									case 3:
 										vo.setCc_area(value);
 										break;
 									case 4:
 										vo.setCa_area(value);
-										break;
+										break;									
 									case 5:
-										vo.setJ_area(value);
-										break;
-									case 6:
-										vo.setB_area(value);
-										break;
-									case 7:
 										vo.setCert_num(value);
 										break;
-									case 8:
+									case 6:
 										vo.setSocial_purpose_type(value);
 										break;
-									case 9:
+									case 7:
 										vo.setJi_date(value);
 										break;									
-									case 11:
+									case 8:
 										vo.setM_cert(value);
 										break;
-									case 12:
+									case 9:
 										vo.setCompany_type(value);
 										break;
-									case 13:
+									case 10:
 										vo.setJojik_type(value);
 										break;
-									case 14:
+									case 11:
 										vo.setEs_date(value);
 										break;
-									case 15:
+									case 12:
 										vo.setBm_number(value);
 										break;
-									case 16:
+									case 13:
 										vo.setCompany_bnum(value);
 										break;
-									case 17:
+									case 14:
 										vo.setCompany_jnum(value);
 										break;
-									case 18:
+									case 15:
 										vo.setUniq_num(value);
 										break;
-									case 19:
+									case 16:
 										vo.setCr_num(value);
 										break;
-									case 20:
+									case 17:
 										vo.setSud_nm(value);
 										break;
-									case 21:
+									case 18:
 										vo.setSud_num(value);
 										break;
-									case 22:
+									case 19:
 										vo.setBiz_detail(value);
 										break;
-									case 23:
+									case 20:
 										vo.setItem_gubun(value);
 										break;
-									case 24:
+									case 21:
 										vo.setItem_dru(value);
 										break;
-									case 25:
+									case 22:
 										vo.setItem_jru(value);
 										break;
-									case 26:
+									case 23:
 										vo.setIndustry_bunryu(value);
 										break;
-									case 27:
+									case 24:
 										vo.setCeo_nm(value);
 										break;
-									case 28:
+									case 25:
 										vo.setCeo_birth(value);
 										break;
-									case 29:
+									case 26:
 										vo.setPic(value);
 										break;
-									case 30:
+									case 27:
 										vo.setC_pos(value);
 										break;
-									case 31:
+									case 28:
 										vo.setHp_number(value);
 										break;
-									case 32:
+									case 29:
 										vo.setAreap_number(value);
 										break;
-									case 33:
+									case 30:
 										vo.setFax_number(value);
 										break;
-									case 34:
+									case 31:
 										vo.setEmail(value);
 										break;
-									case 35:
+									case 32:
 										vo.setHomepage(value);
 										break;
 									default:

@@ -4,8 +4,11 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Date;
 import com.process.dm.DM_CERTIFIED_COMPANY;
+import com.process.util.LogWriter;
 
 public class BLAD_CERTIFIED {
+	final static String logfile = "/Users/hunchori/Documents/logs/PAY.log";
+	
 	private int CERTIFIED_COMPANY_INSERT(DM_CERTIFIED_COMPANY info, Connection conn) throws SQLException{		
 		if (conn == null){
 			throw new NullPointerException("SqlCon Connection is null.");
@@ -47,7 +50,7 @@ public class BLAD_CERTIFIED {
 				.append("HP_NUMBER, ")
 				.append("AREAP_NUMBER, ")
 				.append("FAX_NUMBER, ")
-				.append("E_MAIL, ")
+				.append("EMAIL, ")
 				.append("REQ_DATE, ")
 				.append("HOMEPAGE)")     
 				.append("VALUES(?, ?, ?, ?, ?, ")
@@ -56,7 +59,7 @@ public class BLAD_CERTIFIED {
 				.append("?, ?, ?, ?, ?, ")
 				.append("?, ?, ?, ?, ?, ")
 				.append("?, ?, ?, ?, ?, ")
-				.append("?, ?, (select now()), ?)");
+				.append("?, ?, (select now()),?)");
 		
 		try{
 			pstmt = conn.prepareStatement(sql.toString());			        
@@ -67,8 +70,8 @@ public class BLAD_CERTIFIED {
 			pstmt.setString(5,info.ca_area);
 			pstmt.setString(6,info.cert_num);
 			pstmt.setString(7,info.spt);
-			pstmt.setString(8 ,info.ji_date);
-			pstmt.setString(9 ,info.m_cert);
+			pstmt.setString(8,info.ji_date);
+			pstmt.setString(9,info.m_cert);
 			pstmt.setString(10,info.company_type);
 			pstmt.setString(11,info.jojik_type);
 			pstmt.setString(12,info.es_date);
@@ -94,8 +97,7 @@ public class BLAD_CERTIFIED {
 			pstmt.setString(32,info.email);
 			pstmt.setString(33,info.homepage);
 						
-        	    result = pstmt.executeUpdate();
-        	    System.out.println("CERTIFIED_COMPANY_INSERT Query : "+sql.toString());
+        	    result = pstmt.executeUpdate();        	    
 			        	
 		} catch(SQLException SQL1) {
             throw SQL1;
@@ -133,7 +135,7 @@ public class BLAD_CERTIFIED {
 		} catch(SQLException SQL1) {
             System.err.println("Exception Occurred at CERTIFIED_COMPANY_INSERT.try " + ( new Date() ).toString());
             StringBuffer msg1 = new StringBuffer("Exception Occurred at CERTIFIED_COMPANY_INSERT ");
-            //( new LogWriter( logfile, msg1.toString(), SQL1 ) ).start();
+            ( new LogWriter( logfile, msg1.toString(), SQL1 ) ).start();
             msg1 = null;
         }
 		return result_return;

@@ -22,6 +22,7 @@ public static void main(String[] args) {
 		for (int i = 0; i < list.size(); i++) {
 			vo = list.get(i);
 			System.out.println(vo.getCompany_name());
+			System.out.println(vo.getCompany_address());
 		}
 	}
 	public static void printList_insert(List<Certified_CompanyVO> list) {

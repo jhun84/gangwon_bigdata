@@ -191,6 +191,39 @@ public class CertifiedExcelReader {
 									case 32:
 										vo.setHomepage(value);
 										break;
+									case 33:
+										vo.setTotal_sales(value);
+										break;
+									case 34:
+										vo.setOper_profit(value);
+										break;
+									case 35:
+										vo.setIncome_term(value);
+										break;
+									case 36:
+										vo.setTotal_labor(value);
+										break;
+									case 37:
+										vo.setTotal_devel_sales(value);
+										break;
+									case 38:
+										vo.setBasic_consalting(value);
+										break;
+									case 39:
+										vo.setPro_consalting(value);
+										break;
+									case 40:
+										vo.setSocial_people(value);
+										break;
+									case 41:
+										vo.setProf_people(value);
+										break;
+									case 42:
+										vo.setSalary_people(value);
+										break;
+									case 43:
+										vo.setVul_people(value);
+										break;
 									default:
 										break;
 									}
@@ -294,14 +327,14 @@ public class CertifiedExcelReader {
 									
 									// 현재 column index에 따라서 vo에 입력
 									switch (cellIndex) {
-									case 0:
+									case 0: // 아이디
 										vo.setCompany_name(value);;
 										break;
 									case 1:
 										vo.setCompany_address(value);;
 										break;
 									case 2:
-										vo.setCompany_zip(value);
+										vo.setCompany_address(value);
 										break;
 									case 3:
 										vo.setCc_area(value);
@@ -392,6 +425,39 @@ public class CertifiedExcelReader {
 										break;
 									case 32:
 										vo.setHomepage(value);
+										break;
+									case 33:
+										vo.setTotal_sales(value);
+										break;
+									case 34:
+										vo.setOper_profit(value);
+										break;
+									case 35:
+										vo.setIncome_term(value);
+										break;
+									case 36:
+										vo.setTotal_labor(value);
+										break;
+									case 37:
+										vo.setTotal_devel_sales(value);
+										break;
+									case 38:
+										vo.setBasic_consalting(value);
+										break;
+									case 39:
+										vo.setPro_consalting(value);
+										break;
+									case 40:
+										vo.setSocial_people(value);
+										break;
+									case 41:
+										vo.setProf_people(value);
+										break;
+									case 42:
+										vo.setSalary_people(value);
+										break;
+									case 43:
+										vo.setVul_people(value);
 										break;
 									default:
 										break;

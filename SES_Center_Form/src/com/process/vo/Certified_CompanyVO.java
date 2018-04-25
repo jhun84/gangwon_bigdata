@@ -1,6 +1,7 @@
 package com.process.vo;
 
 public class Certified_CompanyVO {
+	private String seq_no;
 	private String company_name; //기관명
 	private String company_address; //소재지
 	private String company_zip; //우편번호
@@ -35,8 +36,91 @@ public class Certified_CompanyVO {
 	private String areap_number; //전화번호
 	private String fax_number; //팩스번호
 	private String email; //이메일
-	private String homepage; //홈페이지 url		
+	private String homepage; //홈페이지 url	
+	private String total_sales;
+	private String oper_profit; 
+	private String income_term;
+	private String total_labor;
+	private String total_devel_sales;
+	private String basic_consalting;
+	private String pro_consalting;
+	private String social_people;
+	private String prof_people;
+	private String salary_people;
+	private String vul_people;
 	
+	public String getSeq_no() {
+		return seq_no;
+	}
+	public void setSeq_no(String seq_no) {
+		this.seq_no = seq_no;
+	}
+	public String getTotal_sales() {
+		return total_sales;
+	}
+	public void setTotal_sales(String total_sales) {
+		this.total_sales = total_sales;
+	}
+	public String getOper_profit() {
+		return oper_profit;
+	}
+	public void setOper_profit(String oper_profit) {
+		this.oper_profit = oper_profit;
+	}
+	public String getIncome_term() {
+		return income_term;
+	}
+	public void setIncome_term(String income_term) {
+		this.income_term = income_term;
+	}
+	public String getTotal_labor() {
+		return total_labor;
+	}
+	public void setTotal_labor(String total_labor) {
+		this.total_labor = total_labor;
+	}
+	public String getTotal_devel_sales() {
+		return total_devel_sales;
+	}
+	public void setTotal_devel_sales(String total_devel_sales) {
+		this.total_devel_sales = total_devel_sales;
+	}
+	public String getBasic_consalting() {
+		return basic_consalting;
+	}
+	public void setBasic_consalting(String basic_consalting) {
+		this.basic_consalting = basic_consalting;
+	}
+	public String getPro_consalting() {
+		return pro_consalting;
+	}
+	public void setPro_consalting(String pro_consalting) {
+		this.pro_consalting = pro_consalting;
+	}
+	public String getSocial_people() {
+		return social_people;
+	}
+	public void setSocial_people(String social_people) {
+		this.social_people = social_people;
+	}
+	public String getProf_people() {
+		return prof_people;
+	}
+	public void setProf_people(String prof_people) {
+		this.prof_people = prof_people;
+	}
+	public String getSalary_people() {
+		return salary_people;
+	}
+	public void setSalary_people(String salary_people) {
+		this.salary_people = salary_people;
+	}
+	public String getVul_people() {
+		return vul_people;
+	}
+	public void setVul_people(String vul_people) {
+		this.vul_people = vul_people;
+	}
 	public String getCompany_name() {
 		return company_name;
 	}
@@ -250,28 +334,6 @@ public class Certified_CompanyVO {
 	@Override
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
-		
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		sb.append("");
-		
 		return sb.toString();
 	}
 }

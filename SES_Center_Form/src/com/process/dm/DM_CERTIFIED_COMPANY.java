@@ -1,6 +1,7 @@
 package com.process.dm;
 
 public class DM_CERTIFIED_COMPANY {
+	public String seq_no;
 	public String company_name; //기관명
 	public String company_address; //소재지
 	public String company_zip; //우편번호
@@ -38,5 +39,16 @@ public class DM_CERTIFIED_COMPANY {
 	public String email; //이메일
 	public String homepage; //홈페이지 url
 	public String req_date; //생성일자
+	public String total_sales;
+	public String oper_profit;
+	public String income_term;
+	public String total_labor;
+	public String total_devel_sales;
+	public String basic_consalting;
+	public String pro_consalting;
+	public String social_people;
+	public String prof_people;
+	public String salary_people;
+	public String vul_people;
 
 }

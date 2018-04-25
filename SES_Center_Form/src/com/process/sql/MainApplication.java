@@ -1,9 +1,11 @@
 package com.process.sql;
 
+import java.sql.SQLException;
+
 import com.process.dm.DM_CERTIFIED_COMPANY;
 
 public class MainApplication {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		String test1 = "test";
 		String test2 = "test";
 		String test3 = "test";

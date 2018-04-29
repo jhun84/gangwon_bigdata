@@ -581,6 +581,39 @@ private ArrayList getCertified_Company_Info(String seq_no, Connection conn) thro
 		}
 		return v;		/// return 값
 	}
+
+private int CERTIFIED_COMPANY_DELETE(String seq_no, Connection conn) throws SQLException{		
+	if (conn == null){
+		throw new NullPointerException("SqlCon Connection is null.");
+	}
+	int result = 0;
+	
+    PreparedStatement pstmt = null;		       
+    
+	StringBuffer sql = new StringBuffer()
+	.append("DELETE FROM CERTIFIED_COMPANY_TOTAL ")				
+	.append("WHERE seq_no = ?");
+	
+	try{
+		pstmt = conn.prepareStatement(sql.toString());			        
+		pstmt.setString(1,seq_no);
+		System.out.println("delete query start="+seq_no);
+							
+    	    result = pstmt.executeUpdate();        	    
+		        	
+	} catch(SQLException SQL1) {
+        throw SQL1;
+    } finally {
+        if (pstmt != null){
+            try {
+                pstmt.close();
+            }catch (SQLException SQL3){
+                throw SQL3;
+            }
+        }
+    }
+	return result;
+}
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -710,6 +743,40 @@ private ArrayList getCertified_Company_Info(String seq_no, Connection conn) thro
             }
         }
 		return result;
+	}
+	
+	public String CERTIFIED_COMPANY_DELETE(String info) throws SQLException {
+		Connection conn = null;
+		int result = 0;
+		String result_return = "";
+							
+		try {
+          	conn = COMMON_CONN.getConnection();
+            conn.setAutoCommit(false);
+                        
+			result = CERTIFIED_COMPANY_DELETE(info, conn);
+            		
+            if(result == 1 ){
+				conn.commit();
+				result_return = "SUCC";
+			}else{
+				conn.rollback();
+				result_return = "ERROR";
+            }            
+            
+		} catch(SQLException SQL1) {
+            System.err.println("Exception Occurred at CERTIFIED_COMPANY_DELETE.try " + ( new Date() ).toString());
+            StringBuffer msg1 = new StringBuffer("Exception Occurred at CERTIFIED_COMPANY_DELETE ");
+            ( new LogWriter( logfile, msg1.toString(), SQL1 ) ).start();
+            msg1 = null;
+        }
+		finally {
+            if (conn != null) {
+                conn.close();
+            }
+        }
+		return result_return;
+		
 	}
 
 }

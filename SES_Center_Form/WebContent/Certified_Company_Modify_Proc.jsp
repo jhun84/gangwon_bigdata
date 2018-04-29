@@ -109,7 +109,7 @@ mod_info.vul_people         =  vul_people;
 result = bl.updateCertified_Company(mod_info);
 
 System.out.println("udpate_result="+result);
-
+if(result.equals("SUCC")){
 %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -118,8 +118,22 @@ System.out.println("udpate_result="+result);
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script>
+function succ_proc(){
+	alert("수정이 완료 되었습니다.");
+	var seq_no = document.getElementById("seq").value;
+	location.href="Certified_Company_View.jsp?seq_no="+seq_no;
+}
+</script>
 </head>
 <body>
+<input type="hidden" id="seq" name="seq" value="<%=seq_no%>">
+<script>
+ succ_proc();
+</script>
 
 </body>
 </html>
+<%
+}
+%>

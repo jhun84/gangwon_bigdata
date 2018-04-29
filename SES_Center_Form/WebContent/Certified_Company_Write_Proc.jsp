@@ -109,16 +109,25 @@ mod_info.vul_people         =  vul_people;
 result = bl.CERTIFIED_COMPANY_INSERT(mod_info);
 System.out.println("write_result="+result);
 
+if(result.equals("SUCC")){
 %>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>사회적인증기업현황</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script>
+function succ_proc(){
+	alert("작성이 완료 되었습니다.");
+	location.href="Certified_Company_List.jsp";
+}
+</script>
 </head>
-<body>
-
+<body onload="javascript:succ_proc()">
 </body>
 </html>
+<%	
+}
+%>

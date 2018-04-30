@@ -1,4 +1,4 @@
-package com.process.sql;
+package com.process.bl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,6 +8,7 @@ import java.util.Date;
 import com.process.dm.DM_CERTIFIED_COMPANY;
 import com.process.util.LogWriter;
 import com.process.util.Utility;
+import com.process.sql.*;
 
 public class BLAD_CERTIFIED {
 	

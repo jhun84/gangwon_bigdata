@@ -6,10 +6,13 @@
 <%@ page import="java.util.Date"%>
 <%@ page import="com.process.dm.*"%>
 <%@ page import="com.process.sql.*"%>
+<%@ page import="com.process.bl.*"%>
 <%
+int page_no = 1;
+int page_size = 100;
         ArrayList           dataList            = new ArrayList();
 		BLAD_CERTIFIED bl = new BLAD_CERTIFIED();
-		dataList = bl.getCertified_Company_List();
+		dataList = bl.getCertified_Company_List(page_no,page_size);
 		DM_CERTIFIED_COMPANY dm_certified_company = new DM_CERTIFIED_COMPANY();
 		
 		int iter = 0;
@@ -28,7 +31,7 @@ function viewCompanyInfo(seq_no){
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>사회적인증기업현황</title>
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="../../css/bootstrap.css">
 </head>
 <body>
 <table width="100%" class="table">
@@ -63,7 +66,7 @@ for(int i = 0; i < iter; i++) {
 </tbody>
 </table>
 <a class="btn btn-default pull-right" href="Certified_Company_Write.jsp">글쓰기</a>
-<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="../../js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.js"></script>
 </body>
 </html>

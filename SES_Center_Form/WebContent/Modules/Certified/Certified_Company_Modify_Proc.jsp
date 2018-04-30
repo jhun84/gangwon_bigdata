@@ -6,6 +6,7 @@
 <%@ page import="java.util.Date"%>
 <%@ page import="com.process.dm.*"%>
 <%@ page import="com.process.sql.*"%>
+<%@ page import="com.process.bl.*"%>
 <%
 String seq_no = request.getParameter("seq_no");
 System.out.println("update_proc seq_no="+seq_no);

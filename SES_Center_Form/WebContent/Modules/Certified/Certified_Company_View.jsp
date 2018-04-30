@@ -6,6 +6,7 @@
 <%@ page import="java.util.Date"%>
 <%@ page import="com.process.dm.*"%>
 <%@ page import="com.process.sql.*"%>
+<%@ page import="com.process.bl.*"%>
 <%
 String seq_no = request.getParameter("seq_no");
         ArrayList           dataList            = new ArrayList();
@@ -26,9 +27,9 @@ String seq_no = request.getParameter("seq_no");
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="../../css/bootstrap.min.css" rel="stylesheet">
 <title>사회적인증기업현황</title>
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="../../css/bootstrap.css">
 <script>
 function Modify() {
 	document.certified_form.action="Certified_Company_Modify.jsp"
@@ -58,9 +59,6 @@ for(int i = 0; i < iter; i++) {
 <div style="font-size:18px;"><b>기관정보</b></div>			
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table">
 <input type="hidden" id="seq_no" name="seq_no" value="<%=dm_certified_company.seq_no%>">
- <tr>
-   <td colspan="2">seq_no: <%=dm_certified_company.seq_no%></td>
- </tr>
  <tr>
    <td>기관명: <%=dm_certified_company.company_name%></td><td>주소: <%=dm_certified_company.company_address%></td>
  </tr>
